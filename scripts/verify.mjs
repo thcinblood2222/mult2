@@ -1,7 +1,8 @@
 import {RenderInternals} from '@remotion/renderer';
+import {resolve} from 'node:path';
 
 const probe=await RenderInternals.callFf({bin:'ffprobe',args:['-v','error','-show_entries',
-  'stream=codec_name,width,height,r_frame_rate,nb_frames:format=duration','-of','json','out/sun-week.mp4'],
+  'stream=codec_name,width,height,r_frame_rate,nb_frames:format=duration','-of','json',resolve('out/sun-week.mp4')],
   indent:false,logLevel:'error',binariesDirectory:null,cancelSignal:undefined});
 const result=JSON.parse(probe.stdout);
 console.log(JSON.stringify(result,null,2));

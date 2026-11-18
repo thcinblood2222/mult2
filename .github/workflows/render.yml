@@ -24,8 +24,6 @@ jobs:
           name: storyboard
           path: out/storyboard.jpg
       - run: npm run render -- --concurrency=4 --crf=19
-      - name: Verify film
-        run: node scripts/verify.mjs
       - uses: actions/upload-artifact@v4
         with:
           name: sun-week-remotion
@@ -35,3 +33,5 @@ jobs:
             docs/VOICEOVER.md
             docs/SOUND.md
           if-no-files-found: error
+      - name: Verify film
+        run: node scripts/verify.mjs
