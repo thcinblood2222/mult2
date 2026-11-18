@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+<g transform="translate(60 60) scale(1.06)">
+<defs>
+<linearGradient id="moon-surface" x2="100%" y2="88%">
+<stop stop-color="#edf2dd">
+</stop>
+<stop offset=".54" stop-color="#a9bac2">
+</stop>
+<stop offset="1" stop-color="#4b6680">
+</stop>
+</linearGradient>
+</defs>
+<circle r="50" fill="url(#moon-surface)" stroke="#a4c7d1" stroke-width=".7">
+</circle>
+<g>
+<ellipse cx="19" cy="-13" rx="14" ry="10.08" fill="#526981" opacity=".54">
+</ellipse>
+<path d="M5 -13 a 14 10.08 0 0 0 28 0" fill="none" stroke="#f4f5d7" opacity=".59" stroke-width="1.2">
+</path>
+</g>
+<g>
+<ellipse cx="-19" cy="13" rx="10" ry="7.199999999999999" fill="#526981" opacity=".54">
+</ellipse>
+<path d="M-29 13 a 10 7.199999999999999 0 0 0 20 0" fill="none" stroke="#f4f5d7" opacity=".59" stroke-width="1.2">
+</path>
+</g>
+<g>
+<ellipse cx="4" cy="21" rx="5" ry="3.5999999999999996" fill="#526981" opacity=".54">
+</ellipse>
+<path d="M-1 21 a 5 3.5999999999999996 0 0 0 10 0" fill="none" stroke="#f4f5d7" opacity=".59" stroke-width="1.2">
+</path>
+</g>
+<g>
+<ellipse cx="-8" cy="-27" rx="8" ry="5.76" fill="#526981" opacity=".54">
+</ellipse>
+<path d="M-16 -27 a 8 5.76 0 0 0 16 0" fill="none" stroke="#f4f5d7" opacity=".59" stroke-width="1.2">
+</path>
+</g>
+<g>
+<ellipse cx="30" cy="18" rx="6" ry="4.32" fill="#526981" opacity=".54">
+</ellipse>
+<path d="M24 18 a 6 4.32 0 0 0 12 0" fill="none" stroke="#f4f5d7" opacity=".59" stroke-width="1.2">
+</path>
+</g>
+<g>
+<ellipse cx="-31" cy="-8" rx="4" ry="2.88" fill="#526981" opacity=".54">
+</ellipse>
+<path d="M-35 -8 a 4 2.88 0 0 0 8 0" fill="none" stroke="#f4f5d7" opacity=".59" stroke-width="1.2">
+</path>
+</g>
+<circle r="50" fill="#091024" opacity="0">
+</circle>
+</g>
+</svg>

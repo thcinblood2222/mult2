@@ -1,0 +1,250 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 660">
+<g transform="translate(177 183) scale(1)">
+<defs>
+<linearGradient id="skin" x2="95%" y2="79%">
+<stop stop-color="rgba(255, 210, 158, 1)">
+</stop>
+<stop offset=".58" stop-color="rgba(233, 163, 127, 1)">
+</stop>
+<stop offset="1" stop-color="rgba(182, 101, 97, 1)">
+</stop>
+</linearGradient>
+<linearGradient id="neckColor" x2="5%" y2="97%">
+<stop stop-color="#674352">
+</stop>
+<stop offset=".7" stop-color="rgba(182, 101, 97, 1)">
+</stop>
+<stop offset="1" stop-color="rgba(255, 210, 158, 1)">
+</stop>
+</linearGradient>
+<linearGradient id="hair" x2="100%" y2="85%">
+<stop stop-color="#674749">
+</stop>
+<stop offset=".3" stop-color="#4b3340">
+</stop>
+<stop offset="1" stop-color="#231f34">
+</stop>
+</linearGradient>
+<linearGradient id="shirt" x2="85%" y2="80%">
+<stop stop-color="#d2ad88">
+</stop>
+<stop offset=".43" stop-color="#b68d79">
+</stop>
+<stop offset="1" stop-color="#75566b">
+</stop>
+</linearGradient>
+<linearGradient id="denim" x2="97%" y2="70%">
+<stop stop-color="#536875">
+</stop>
+<stop offset=".65" stop-color="#334758">
+</stop>
+<stop offset="1" stop-color="#233042">
+</stop>
+</linearGradient>
+<linearGradient id="coat" x2="100%" y2="83%">
+<stop stop-color="#8aa8b1">
+</stop>
+<stop offset=".3" stop-color="#567a8f">
+</stop>
+<stop offset=".75" stop-color="#3d5b74">
+</stop>
+<stop offset="1" stop-color="#254157">
+</stop>
+</linearGradient>
+<linearGradient id="hat" x2="100%" y2="80%">
+<stop stop-color="#daa27d">
+</stop>
+<stop offset=".5" stop-color="#aa7271">
+</stop>
+<stop offset="1" stop-color="#6c4b60">
+</stop>
+</linearGradient>
+</defs>
+<g transform="translate(-41 249) rotate(5)">
+<path d="M-36-17q31-12 63 2 7 86-1 167l-5 38-43 3-9-45z" fill="url(#denim)" stroke="#192938" stroke-width="3">
+</path>
+<path d="M-20 15q12 57 7 110m36 3l-25 3m-19 44q17 4 41 0" fill="none" stroke="#84969b" opacity=".57" stroke-width="2.3">
+</path>
+<g transform="translate(1 186) rotate(0)">
+<path d="M-24-7q25 7 45 0l7 11 22 8q9 5 9 15l-81 1q-10-8-2-35z" fill="#9c584f" stroke="#482d38" stroke-width="2.6">
+</path>
+<path d="M-27 22q34 3 85 2l1 7q-44 8-84 1z" fill="#e8d9b6" stroke="#6e584f" stroke-width="1.8">
+</path>
+<path d="M12 8l15-1m-9 7l17-1m4 2l8 4m-69 9h56" stroke="#ffe1b5" stroke-width="1.6">
+</path>
+<path d="M-19 12h18l7 6-25 1z" fill="#623d48">
+</path>
+</g>
+</g>
+<g transform="translate(33 249) rotate(-3)">
+<path d="M-36-17q31-12 63 2 7 86-1 167l-5 38-43 3-9-45z" fill="url(#denim)" stroke="#192938" stroke-width="3">
+</path>
+<path d="M-20 15q12 57 7 110m36 3l-25 3m-19 44q17 4 41 0" fill="none" stroke="#84969b" opacity=".57" stroke-width="2.3">
+</path>
+<g transform="translate(1 186) rotate(0)">
+<path d="M-24-7q25 7 45 0l7 11 22 8q9 5 9 15l-81 1q-10-8-2-35z" fill="#9c584f" stroke="#482d38" stroke-width="2.6">
+</path>
+<path d="M-27 22q34 3 85 2l1 7q-44 8-84 1z" fill="#e8d9b6" stroke="#6e584f" stroke-width="1.8">
+</path>
+<path d="M12 8l15-1m-9 7l17-1m4 2l8 4m-69 9h56" stroke="#ffe1b5" stroke-width="1.6">
+</path>
+<path d="M-19 12h18l7 6-25 1z" fill="#623d48">
+</path>
+</g>
+</g>
+<g transform="rotate(0)">
+<path d="M-76 22q30-13 48-12h61q32 3 47 16l-3 214q-83 23-160 0l7-49z" fill="url(#shirt)" stroke="#6b4c5b" stroke-width="3">
+</path>
+<path d="M-33 13q14 32 33 30 24-1 34-29m-94 89q6 62-1 96m112-75q13 49 10 70m-135 31q67 17 144-2" fill="none" stroke="#684b5d" stroke-width="2.5" opacity=".7">
+</path>
+<path d="M27 97l32-8v26l-11 8-20-7z" fill="#b98c78" stroke="#825c63" stroke-width="1.5">
+</path>
+<path d="M28 101l28-7m-105 66q-11 47-10 62" stroke="#e9c59c" opacity=".6" fill="none" stroke-width="1.8">
+</path>
+<g opacity="0">
+<path d="M-84 32q22-18 59-21l21 26-1 206q-38 11-74-1l-4-57-7-124z" fill="url(#coat)" stroke="#21374c" stroke-width="3" transform="translate(0 0) skewX(0)">
+</path>
+<path d="M84 32q-22-18-58-21L3 37l2 206q40 11 73-1l6-57 7-124z" fill="url(#coat)" stroke="#21374c" stroke-width="3" transform="translate(0 0) skewX(0)">
+</path>
+<g fill="none" stroke="#a3bcc2" stroke-width="2.2" opacity=".59">
+<path d="M-82 67q37 12 69 10m25 0q38 1 69-10M-80 110q38 13 65 10m29 0q35 1 65-10m-155 44q34 11 60 9m30 1q34 0 62-10m-148 48q33 9 59 5m29 0q28 4 59-5">
+</path>
+<path d="M-65 202l15-31m98 0l15 31" stroke-width="4" stroke="#20394d">
+</path>
+</g>
+<path d="M-48 112l16 2v12l-16-2z" fill="#edb08a">
+</path>
+<path d="M-83 234q37 14 80 5 50 9 84-5v10q-40 17-84 6-42 11-79-4z" fill="#324c60">
+</path>
+<path d="M-26 10l20 28-10 28-31-43zm52 0L6 38l10 28 31-43z" fill="#49677a" stroke="#274557" stroke-width="2">
+</path>
+<path d="M0 237V42" stroke="#d3c29d" stroke-dasharray="2 2" stroke-width="4" opacity="1">
+</path>
+<rect x="-3" y="40" width="6" height="12" rx="2" fill="#f3c58c">
+</rect>
+</g>
+<g transform="rotate(0)">
+<g>
+<path d="M-20-20l-3 35q20 23 45 0l-3-37z" fill="url(#neckColor)">
+</path>
+<path d="M-53-66q-14-11-15 6t13 27l9-4m96-35q16-6 15 9t-16 24l-7-6" fill="#cb816a" stroke="#6c4350" stroke-width="2">
+</path>
+<path d="M-53-55q-2 20 13 40 15 20 36 23 19 0 42-19 18-17 19-63l-6-33-36-16-51 7-18 30z" fill="url(#skin)" stroke="#51334a" stroke-width="2.1">
+</path>
+<path d="M-50-48Q-38-29-23-25q17 10 21 27-22 5-43-24zm90-6q-1 20-13 37-9 13-21 23 35-13 45-50z" fill="#ab6364" opacity=".38">
+</path>
+<path d="M-53-48q-7-11-11-25-9-17 0-36-1-18 13-31 15-16 47-14 29-11 51 12 18 8 20 30 8 25-12 55l-7-10q3-27-8-40-11 11-45 13 8-5 13-13-22 17-50 20l-4 38z" fill="url(#hair)" stroke="#211c30" stroke-width="2.9">
+</path>
+<path d="M-59-104q14-28 51-31 31-11 52 1M-48-112q12-16 38-18m19 13q30-19 44 7m-14 8q16-4 18 8" fill="none" stroke="#916459" stroke-width="2.4" opacity=".65">
+</path>
+<path d="M-62-116q16 -31 48-27" fill="none" stroke="#c48b69" stroke-width="2.7" stroke-linecap="round" opacity=".6">
+</path>
+<g transform="translate(0 0)">
+<path d="M-43 -78q12 -8 24 -2m26 2q14 -8 26 2" fill="none" stroke="#3a2536" stroke-width="4.2" stroke-linecap="round">
+</path>
+<g transform="translate(-33 -66) scale(1 1)">
+<path d="M-11 1q10-9 21-1-7 11-19 4z" fill="#fff3d9" stroke="#553540" stroke-width="1.8">
+</path>
+<ellipse cx="1" cy="1" rx="3.9" ry="4.7" fill="#405358">
+</ellipse>
+<circle cx="2" cy="0" r="1.8" fill="#202032">
+</circle>
+<circle cx="0.5" cy="-1" r="1" fill="#fff3d9">
+</circle>
+</g>
+<g transform="translate(21 -66) scale(1 1)">
+<path d="M-11 1q10-9 21-1-7 11-19 4z" fill="#fff3d9" stroke="#553540" stroke-width="1.8">
+</path>
+<ellipse cx="1" cy="1" rx="3.9" ry="4.7" fill="#405358">
+</ellipse>
+<circle cx="2" cy="0" r="1.8" fill="#202032">
+</circle>
+<circle cx="0.5" cy="-1" r="1" fill="#fff3d9">
+</circle>
+</g>
+<path d="M-8-61q-1 10-6 17l7 4 7-2" fill="none" stroke="#9c5459" stroke-width="1.6" stroke-linecap="round">
+</path>
+<path d="M-15-26Q-5 -33 9 -26Q-2 -23 -15-26z" fill="#733e4d" stroke="#713a44" stroke-width="1.5">
+</path>
+<path d="M-11-16q6 3 13 0" fill="none" stroke="#aa6064" stroke-width="1.25" opacity=".68">
+</path>
+</g>
+<ellipse cx="-33" cy="-41" rx="12" ry="5" fill="#e66e66" opacity="0.22">
+</ellipse>
+<ellipse cx="28" cy="-42" rx="10" ry="5" fill="#e66e66" opacity="0.18">
+</ellipse>
+<path d="M-49-16q15 22 38 26m-18-5l2-4m3 6l2-5m5 8l2-5m5 6l2-5m5 4l2-4m6 3l1-4m5 2l1-4" stroke="#794951" opacity=".5" fill="none" stroke-width="1.2">
+</path>
+</g>
+<g opacity="0" transform="translate(0 0)">
+<path d="M-64-104q-4-37 19-53 18-11 44-11 39 0 55 25 14 17 11 43z" fill="url(#hat)" stroke="#202e43" stroke-width="3">
+</path>
+<path d="M-50-112q2-34 23-49m-8 54q1-39 20-57m-4 52q-2-34 11-55m4 56q0-35 5-56m12 55q2-33-3-52m20 52q-2-27-8-45m19 47q-1-25-8-38" fill="none" stroke="#e9b18b" opacity=".49" stroke-width="2.2">
+</path>
+<path d="M-63-114q57 11 128 0l-2 22q-65 12-125 0z" fill="#8c5a60" stroke="#392e46" stroke-width="2">
+</path>
+<path d="M-54-109l1 13m10-11 1 13m10-12 1 13m10-12 1 13m10-12 1 13m10-12v13m11-13v13m11-14v13m11-14v13m11-14v13m11-15v13" stroke="#f0b395" opacity=".55" stroke-width="1.3">
+</path>
+<path d="M38-106l15-2v10l-15 2z" fill="#e2b394">
+</path>
+</g>
+</g>
+<g transform="translate(-74 37)">
+<g transform="rotate(8)">
+<path d="M-23 4q1-17 22-16 20 0 22 24l-4 68q-15 17-31 2z" fill="url(#skin)" stroke="#6e4653" stroke-width="2">
+</path>
+<path d="M-23 4q0-18 22-19 24 2 25 24l-2 27q-22 13-43 2z" fill="url(#shirt)" stroke="#5a474f" stroke-width="2">
+</path>
+<path d="M-24 1q5-20 23-19 25 3 28 28l-5 68q-13 18-41 4z" opacity="0" fill="url(#coat)" stroke="#233747" stroke-width="2.6">
+</path>
+<path d="M-22 32q23 7 47-2m-45 26q20 9 42-3" opacity="0" stroke="#97afba" fill="none" stroke-width="1.6">
+</path>
+<g transform="translate(1 79) rotate(-8)">
+<path d="M-17-5q16-10 33-3l-4 62-3 10-18 1-5-21z" fill="url(#skin)" stroke="#754651" stroke-width="2">
+</path>
+<path d="M-21-7q27-10 43 1l-6 56-4 11h-26l-5-18z" opacity="0" fill="url(#coat)" stroke="#253a4b" stroke-width="2.5">
+</path>
+<path d="M-18 20q17 7 37 0m-34 26q19 5 31 0m-27 10h22" opacity="0" stroke="#a3bbc6" fill="none" stroke-width="1.6">
+</path>
+<g transform="translate(0 62) scale(1 1)">
+<g>
+<path d="M-9-2q-5 6-7 12l-3 9q1 4 4 2l5-6-2 12q2 4 5 1l3-9-1 12q1 4 4 1l3-10 1 8q2 3 4 0l2-11 2 5q3 2 4-1l1-12-5-13z" fill="url(#skin)" stroke="#7e4b53" stroke-width="1.6">
+</path>
+<path d="M-10 14q6 1 7-6m5 11l2-7m6 7l1-5" stroke="#995b5b" opacity=".65" fill="none" stroke-linecap="round">
+</path>
+</g>
+</g>
+</g>
+</g>
+</g>
+<g transform="translate(73 37)">
+<g transform="rotate(-9)">
+<path d="M-23 4q1-17 22-16 20 0 22 24l-4 68q-15 17-31 2z" fill="url(#skin)" stroke="#6e4653" stroke-width="2">
+</path>
+<path d="M-23 4q0-18 22-19 24 2 25 24l-2 27q-22 13-43 2z" fill="url(#shirt)" stroke="#5a474f" stroke-width="2">
+</path>
+<path d="M-24 1q5-20 23-19 25 3 28 28l-5 68q-13 18-41 4z" opacity="0" fill="url(#coat)" stroke="#233747" stroke-width="2.6">
+</path>
+<path d="M-22 32q23 7 47-2m-45 26q20 9 42-3" opacity="0" stroke="#97afba" fill="none" stroke-width="1.6">
+</path>
+<g transform="translate(1 79) rotate(11)">
+<path d="M-17-5q16-10 33-3l-4 62-3 10-18 1-5-21z" fill="url(#skin)" stroke="#754651" stroke-width="2">
+</path>
+<path d="M-21-7q27-10 43 1l-6 56-4 11h-26l-5-18z" opacity="0" fill="url(#coat)" stroke="#253a4b" stroke-width="2.5">
+</path>
+<path d="M-18 20q17 7 37 0m-34 26q19 5 31 0m-27 10h22" opacity="0" stroke="#a3bbc6" fill="none" stroke-width="1.6">
+</path>
+<g transform="translate(0 62) scale(-1 1)">
+<g>
+<path d="M-9-2q-5 6-7 12l-3 9q1 4 4 2l5-6-2 12q2 4 5 1l3-9-1 12q1 4 4 1l3-10 1 8q2 3 4 0l2-11 2 5q3 2 4-1l1-12-5-13z" fill="url(#skin)" stroke="#7e4b53" stroke-width="1.6">
+</path>
+<path d="M-10 14q6 1 7-6m5 11l2-7m6 7l1-5" stroke="#995b5b" opacity=".65" fill="none" stroke-linecap="round">
+</path>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</svg>

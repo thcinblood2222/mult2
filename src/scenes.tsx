@@ -30,8 +30,8 @@ export function IntroScene() {
     <rect width="720" height="1280" fill="url(#vignette)"/>
     <Reveal at={17} until={159}><g transform="translate(56 872)">
       <path d="M0-43h74" stroke="#ffc283" strokeWidth="4"/>
-      <text fontSize="94" fontWeight="860" fill="#fff1db" letterSpacing="-5">7 ДНЕЙ</text>
-      <text y="94" fontSize="83" fontWeight="860" fill="#fff1db" letterSpacing="-5">БЕЗ СОЛНЦА</text>
+      <text fontSize="94" fontWeight="860" fill="#fff1db" letterSpacing="-2">7 ДНЕЙ</text>
+      <text y="94" fontSize="83" fontWeight="860" fill="#fff1db" letterSpacing="-3">БЕЗ СОЛНЦА</text>
       <text y="158" fontSize="23" fontWeight="730" fill="#a5ddd7" letterSpacing="3.5">МЫСЛЕННЫЙ ЭКСПЕРИМЕНТ</text>
     </g></Reveal>
     <rect width="720" height="1280" fill="#f8ba95" opacity={smooth(f,160,179)*.88}/>
@@ -53,8 +53,8 @@ export function Day1Scene() {
     <rect width="720" height="1280" fill="url(#vignette)"/>
     <rect width="720" height="1280" fill="#eeb08e" opacity={(1-smooth(f,0,15))*.76}/>
     <Day number={1} until={47}/>
-    <InfographicSystem at={day1TimerAt} until={229} eyebrow="ЗАДЕРЖКА СИГНАЛА" value={time} label="Свет ещё в пути" accent="#ffcf90" y={187}/>
-    <g opacity={pan}><SpaceBackdrop f={f}/><Moon x={360} y={543} r={112} light={1-smooth(f,310,338)}/></g>
+    <InfographicSystem at={day1TimerAt} until={229} eyebrow="ЗАДЕРЖКА СИГНАЛА" value={time} label={seconds>0?"Свет ещё в пути":"Последний свет достиг Земли"} accent="#ffcf90" y={187}/>
+    <g opacity={pan}><SpaceBackdrop f={f}/><Moon x={mix(540,360,pan)} y={mix(278,458,pan)} r={mix(37,112,pan)} light={1-smooth(f,310,338)}/></g>
     <Reveal at={332} until={359}><text x="60" y="1027" fontSize="33" fill="#ecf5ef" fontWeight="810">Луна гаснет. Звёзды остаются.</text></Reveal>
   </Stage>;
 }
@@ -172,6 +172,8 @@ export function Day6Scene() {
       <HydrothermalField f={f}/>
     </ParallaxCamera>
     <rect width="720" height="1280" fill="url(#vignette)" opacity=".64"/>
+    <defs><linearGradient id="vents-caption" x2="0%" y2="100%"><stop stopColor="#081422" stopOpacity="0"/><stop offset=".46" stopColor="#081422" stopOpacity=".9"/><stop offset="1" stopColor="#081422"/></linearGradient></defs>
+    <rect x="0" y="864" width="720" height="416" fill="url(#vents-caption)" opacity={smooth(f,211,239)}/>
     <Day number={6} at={22} until={69}/>
     <InfographicSystem at={223} until={346} eyebrow="ГИДРОТЕРМАЛЬНЫЕ ИСТОЧНИКИ" value="Жизнь на глубине" label="Энергия из химических реакций" y={961}/>
   </Stage>;
@@ -190,7 +192,7 @@ export function TemperatureGauge({f}: {f:number}) {
       <circle cy="217" r="15" fill="#6ce3ed"/>
       {Array.from({length:8},(_,i)=><path key={i} d={`M 22 ${12+i*24} h ${i%2?8:16}`} stroke="#9cd7de" opacity=".69"/>)}
     </g>
-    <g transform="translate(60 995)" fill="#f5fbfb">
+    <g transform="translate(60 239)" fill="#f5fbfb">
       <text fontSize="17" letterSpacing="3.1" fill="#b1edea" fontWeight="800">ИЛЛЮСТРАТИВНАЯ ТЕМПЕРАТУРА</text>
       <text y="74" fontSize="67" letterSpacing="-3" fontWeight="850">{value<0?`−${-value}`:value} °C</text>
     </g>
@@ -213,7 +215,7 @@ export function Day7Scene() {
     </g>
     <Day number={7}/>
     <TemperatureGauge f={f}/>
-    <InfographicSystem at={222} until={315} eyebrow="ВОЗВРАЩЕНИЕ СВЕТА" value="Солнце вернулось" label="Город всё ещё во льду" accent="#ffcf99" y={962}/>
+    <InfographicSystem at={222} until={315} eyebrow="ВОЗВРАЩЕНИЕ СВЕТА" value="Солнце вернулось" label="Город всё ещё во льду" accent="#ffcf99" y={170}/>
   </Stage>;
 }
 export function FinalScene() {

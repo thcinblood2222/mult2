@@ -131,10 +131,10 @@ export function Character2D({f,x,y,scale=1,dressing=false,winter=false,feeling=0
   const adjust=dressing?smooth(f,128,150)*(1-smooth(f,168,187)):0;
   const jacketGrip=dressing?smooth(f,44,56)*(1-smooth(f,75,93)):0;
   const zipper=dressing?smooth(f,94,108)*(1-smooth(f,121,132)):0;
-  const gripY=mix(205,-89,smooth(f,128,154));
+  const gripY=mix(184,-89,smooth(f,128,154));
   const gripX=mix(137,59,smooth(f,128,154));
-  const [hatLeft,hatLeftElbow]=reach(-74,-58,mix(70,-96,smooth(f,131,154)),1);
-  const [hatRight,hatRightElbow]=reach(73,gripX,gripY,-1);
+  const [hatLeft,hatLeftElbow]=reach(-74,-58,mix(70,-96,smooth(f,131,154)),-1);
+  const [hatRight,hatRightElbow]=reach(73,gripX,gripY,1);
   const [jacketRight,jacketRightElbow]=reach(73,mix(163,94,smooth(f,54,78)),mix(91,39,smooth(f,54,83)),-1);
   const [zipRight,zipRightElbow]=reach(73,3,mix(175,44,smooth(f,105,122)),-1);
   const coat=dressing?smooth(f,75,93):Number(winter);
@@ -166,7 +166,7 @@ export function Character2D({f,x,y,scale=1,dressing=false,winter=false,feeling=0
         <CharacterFaceRig f={f} feeling={feeling} turn={look} warmth={shiver}/>
         <Hat opacity={hat}/>
       </g>
-      {dressing&&<JacketProp f={f} x={mix(132,9,smooth(f,51,78))} y={mix(104,15,smooth(f,53,90))}/>}
+      {dressing&&<JacketProp f={f} x={mix(141,9,smooth(f,51,78))} y={mix(59,15,smooth(f,53,90))}/>}
       {dressing&&<Hat x={mix(86,0,smooth(f,128,154))} y={gripY+101} opacity={smooth(f,123,131)*(1-smooth(f,147,155))}/>}
       <g transform="translate(-74 37)"><Arm angle={mix(pose.left,hatLeft,adjust)} elbow={mix(pose.leftElbow,hatLeftElbow,adjust)} coat={coat} flip={false}/></g>
       <g transform="translate(73 37)"><Arm angle={mix(mix(mix(pose.right,jacketRight,jacketGrip),zipRight,zipper),hatRight,adjust)} elbow={mix(mix(mix(pose.rightElbow,jacketRightElbow,jacketGrip),zipRightElbow,zipper),hatRightElbow,adjust)} coat={coat} flip/></g>

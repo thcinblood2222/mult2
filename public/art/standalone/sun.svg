@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320">
+<g transform="translate(160 160)" opacity="1">
+<defs>
+<radialGradient id="sun-corona">
+<stop stop-color="#fff3be" stop-opacity=".8">
+</stop>
+<stop offset=".38" stop-color="#fdb466" stop-opacity=".48">
+</stop>
+<stop offset=".66" stop-color="#ec7541" stop-opacity=".14">
+</stop>
+<stop offset="1" stop-color="#ec7541" stop-opacity="0">
+</stop>
+</radialGradient>
+<radialGradient id="sun-core" cx=".34" cy=".27" r=".77">
+<stop stop-color="#ffffdb">
+</stop>
+<stop offset=".56" stop-color="#ffde87">
+</stop>
+<stop offset="1" stop-color="#ef8b53">
+</stop>
+</radialGradient>
+<clipPath id="sun-disk">
+<circle r="53">
+</circle>
+</clipPath>
+</defs>
+<circle r="151.5108730147827" fill="url(#sun-corona)">
+</circle>
+<circle r="53" fill="url(#sun-core)">
+</circle>
+<g clip-path="url(#sun-disk)">
+<path d="M-38.78616786501516 8.682032682016143q 14.31 -6.359999999999999 20.67 1.431" fill="none" stroke="#ae6336" stroke-width="2.5135798488772707" opacity=".2">
+</path>
+<path d="M-44.431565022263385 -45.347490472304344q 14.31 -6.359999999999999 20.67 1.431" fill="none" stroke="#ae6336" stroke-width="2.7059336909660487" opacity=".2">
+</path>
+<path d="M16.076528930207132 50.515019562939415q 14.31 -6.359999999999999 20.67 1.431" fill="none" stroke="#ae6336" stroke-width="2.038613058939518" opacity=".2">
+</path>
+<path d="M-10.758960842089436 46.848179980777786q 14.31 -6.359999999999999 20.67 1.431" fill="none" stroke="#ae6336" stroke-width="1.98582295239612" opacity=".2">
+</path>
+<path d="M40.618402360531036 -1.1147796671284596q 14.31 -6.359999999999999 20.67 1.431" fill="none" stroke="#ae6336" stroke-width="2.4475450365462166" opacity=".2">
+</path>
+<path d="M26.197093051807315 17.910144284833223q 14.31 -6.359999999999999 20.67 1.431" fill="none" stroke="#ae6336" stroke-width="2.0243709069036413" opacity=".2">
+</path>
+<path d="M-42.443419069895754 34.45128775462126q 14.31 -6.359999999999999 20.67 1.431" fill="none" stroke="#ae6336" stroke-width="1.981544116923942" opacity=".2">
+</path>
+<path d="M-27.581136023200457 -45.24877448078769q 14.31 -6.359999999999999 20.67 1.431" fill="none" stroke="#ae6336" stroke-width="2.0275838484958513" opacity=".2">
+</path>
+<path d="M12.264808993524639 -4.3220227447964135q 14.31 -6.359999999999999 20.67 1.431" fill="none" stroke="#ae6336" stroke-width="1.0146959314570267" opacity=".2">
+</path>
+<path d="M-18.12741035758154 -9.398477973416448q 14.31 -6.359999999999999 20.67 1.431" fill="none" stroke="#ae6336" stroke-width="1.17022756782535" opacity=".2">
+</path>
+<path d="M-4.140795121114934 -26.86078613261634q 14.31 -6.359999999999999 20.67 1.431" fill="none" stroke="#ae6336" stroke-width="2.4913760151757742" opacity=".2">
+</path>
+<path d="M-25.673796257688082 -42.423769248940516q 14.31 -6.359999999999999 20.67 1.431" fill="none" stroke="#ae6336" stroke-width="2.8748064844839973" opacity=".2">
+</path>
+<path d="M8.682032682016143 35.56279533849738q 14.31 -6.359999999999999 20.67 1.431" fill="none" stroke="#ae6336" stroke-width="2.0280046490879613" opacity=".2">
+</path>
+<path d="M-45.347490472304344 25.47427162752865q 14.31 -6.359999999999999 20.67 1.431" fill="none" stroke="#ae6336" stroke-width="1.1339682900579646" opacity=".2">
+</path>
+<path d="M50.515019562939415 49.1999836252362q 14.31 -6.359999999999999 20.67 1.431" fill="none" stroke="#ae6336" stroke-width="1.7111446674971376" opacity=".2">
+</path>
+<path d="M46.848179980777786 -22.5127334400604q 14.31 -6.359999999999999 20.67 1.431" fill="none" stroke="#ae6336" stroke-width="1.0377615637771669" opacity=".2">
+</path>
+<path d="M-1.1147796671284596 -7.208716519569862q 14.31 -6.359999999999999 20.67 1.431" fill="none" stroke="#ae6336" stroke-width="2.2284909369482193" opacity=".2">
+</path>
+<path d="M17.910144284833223 -24.32370769760928q 14.31 -6.359999999999999 20.67 1.431" fill="none" stroke="#ae6336" stroke-width="2.445698544919651" opacity=".2">
+</path>
+<path d="M34.45128775462126 -21.949988024076447q 14.31 -6.359999999999999 20.67 1.431" fill="none" stroke="#ae6336" stroke-width="1.3988484680303372" opacity=".2">
+</path>
+</g>
+</g>
+</svg>
