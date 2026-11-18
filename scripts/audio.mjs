@@ -25,8 +25,8 @@ const chords=[[55,82.41,130.81,164.81],[49,73.42,116.54,146.83],[46.25,69.30,110
 let air=0, rumble=0;
 for (let i=0;i<frames;i++) {
   const t=i/rate, noise=random();
-  air=air*.89+.11*noise;
-  rumble=rumble*.994+.006*noise;
+  air=air*.982+.018*noise;
+  rumble=rumble*.998+.002*noise;
   let bed=0;
   for (let j=0;j<chords.length;j++) {
     const a=starts[j]/30-1.2,b=starts[j+1]/30+1.3;
@@ -43,8 +43,8 @@ for (let i=0;i<frames;i++) {
   const water=envelope(t,40,75);
   const fade=clip(t/.48)*clip((90-t)/.55);
   music[i]=bed*fade;
-  ambience[i]=(air*(.018+wind*(.14+.034*Math.sin(t*1.1)))+rumble*(.20+water*.61)+
-    Math.sin(tau*(32.2*t+.021*Math.sin(t*.7)))*(.015*dark+.028*water))*fade;
+  ambience[i]=(air*wind*(.052+.014*Math.sin(t*1.1))+rumble*water*.18+
+    Math.sin(tau*(32.2*t+.021*Math.sin(t*.7)))*(.009*dark+.013*water))*fade;
 }
 const cues=[];
 function effect(frame,name,length,fn) {
@@ -62,18 +62,37 @@ function tone(frame, label, from,to,length=.18,gain=.12) {
 function wash(frame,label,length,gain) {
   let filtered=0;
   effect(frame,label,length,t=>{
-    filtered=filtered*.92+.08*random();
-    return gain*Math.sin(Math.PI*t/length)**2*(filtered*.9+Math.sin(tau*(76*t-12*t*t))*.28);
+    filtered=filtered*.973+.027*random();
+    return gain*Math.sin(Math.PI*t/length)**2*(filtered*.36+Math.sin(tau*(105*t-33*t*t))*.21);
+  });
+}
+// The filtered air rises into the cut, then falls quickly while its low body trails off.
+function whoosh(cutFrame, label, {lead=8, tail=11, gain=.15, low=130, high=1750}={}) {
+  const length=(lead+tail)/30;
+  const cut=lead/30;
+  let upper=0, lower=0;
+  effect(cutFrame-lead,label,length,t=>{
+    const rise=clip(t/cut);
+    const decay=clip((t-cut)/(length-cut));
+    const envelope=t<cut ? Math.sin(Math.PI*rise/2)**2 : (1-decay)**3;
+    const noise=random();
+    const upperHz=high*(.30+.70*rise)*(1-.68*decay);
+    const lowerHz=upperHz*.22;
+    upper+=(1-Math.exp(-tau*upperHz/rate))*(noise-upper);
+    lower+=(1-Math.exp(-tau*lowerHz/rate))*(noise-lower);
+    const phase=tau*(low*t+low*.78*t*t/(2*length));
+    const body=Math.sin(phase)*.28+Math.sin(phase*1.47)*.12;
+    return gain*envelope*((upper-lower)*1.30+(1-.55*decay)*body);
   });
 }
 function impact(frame,label,gain) {
   effect(frame,label,1.15,t=>gain*clip(t/.007)*Math.exp(-t*4.7)*(Math.sin(tau*(55*t-14*t*t))+
-    .29*Math.sin(tau*(93*t-17*t*t))+.2*random()*Math.exp(-t*18)));
+    .29*Math.sin(tau*(93*t-17*t*t))+.047*random()*Math.exp(-t*23)));
 }
-wash(153,'Переход из космоса в город',1,.23);
+whoosh(179,'Whoosh · из космоса в город',{lead:15,tail:13,gain:.20,low:88,high:1640});
 for(let i=0;i<=day1TimerSteps;i++)tone(starts[1]+day1TimerAt+i*day1Tick,'Таймер',870-i*18,620-i*14,.09,.095);
 impact(starts[1]+196,'Свет гаснет',.31);
-wash(starts[1]+278,'Переход к Луне',1.1,.22);
+whoosh(starts[1]+322,'Whoosh · переход к Луне',{lead:11,tail:10,gain:.12,low:113,high:1430});
 tone(starts[2]+110,'Скорость',610,730,.13,.08);
 tone(starts[2]+203,'Счётчик расстояния',470,650,.13,.08);
 wash(starts[3]+21,'Выдох на морозе',.53,.22);
@@ -83,16 +102,19 @@ wash(starts[3]+105,'Молния куртки',.46,.37);
 wash(starts[3]+144,'Шапка',.4,.3);
 for(const [i,f] of plantSteps.entries())tone(starts[3]+plantAt+f,'Падение фотосинтеза',840-i*131,645-i*114,.23,.15);
 tone(starts[3]+plantAt+116,'Кислород',462,564,.19,.09);
-wash(starts[4]+86,'Гравитационная схема',.9,.25);
+whoosh(starts[4]+94,'Whoosh · переход к схеме приливов',{lead:12,tail:12,gain:.14,low:143,high:1900});
 wash(starts[5]+65,'Лёд',1.2,.37);
 for(const f of [104,136,151])tone(starts[5]+f,'Трещины во льду',1480,620,.088,.085);
-wash(starts[5]+141,'Погружение',2.1,.4);
+whoosh(starts[5]+198,'Whoosh · под поверхность воды',{lead:19,tail:20,gain:.20,low:71,high:1160});
 for(const f of [182,213,255])tone(starts[5]+f,'Пузырьки',278,489,.23,.075);
 impact(starts[6]+67,'Подводный гул источника',.17);
 for(const [i,f] of thermometerSteps.entries())tone(starts[7]+f,'Щелчок термометра',682-i*59,372-i*36,.16,.145);
-wash(starts[7]+182,'Возвращение Солнца',2.45,.38);
+whoosh(starts[7]+212,'Whoosh · возвращение Солнца',{lead:17,tail:16,gain:.18,low:141,high:2180});
 tone(starts[7]+226,'Первый луч',331,416,.68,.09);
 impact(starts[8]+70,'Новая траектория',.39);
+whoosh(starts[2]+52,'Whoosh · выход на касательную',{lead:7,tail:12,gain:.12,low:118,high:1790});
+whoosh(starts[3]+plantAt,'Whoosh · с улицы к растению',{lead:12,tail:10,gain:.14,low:110,high:1580});
+whoosh(starts[8],'Whoosh · переход к финальной орбите',{lead:11,tail:8,gain:.15,low:91,high:1370});
 mkdirSync(new URL('../public/audio/',import.meta.url),{recursive:true});
 wav('music',music);wav('ambience',ambience);wav('effects',effects);
 
