@@ -1,7 +1,7 @@
 import {bundle} from '@remotion/bundler';
 import {openBrowser, renderStill, selectComposition} from '@remotion/renderer';
-import {mkdir, rm} from 'node:fs/promises';
-import {spawnSync} from 'node:child_process';
+import {mkdir} from 'node:fs/promises';
+import sharp from 'sharp';
 import {boardFrames} from '../src/timeline.ts';
 
 const browserExecutable=process.env.REMOTION_BROWSER || undefined;
@@ -9,13 +9,13 @@ const browser=await openBrowser('chrome',{browserExecutable});
 try {
   const serveUrl=await bundle({entryPoint:'src/index.tsx'});
   const composition=await selectComposition({serveUrl,id:'SunWeek',puppeteerInstance:browser});
-  await mkdir('out/board',{recursive:true});
+  await mkdir('out',{recursive:true});
+  const tiles=[];
   for(const [i,frame] of boardFrames.entries()){
-    await renderStill({serveUrl,composition,frame,scale:.25,imageFormat:'jpeg',jpegQuality:87,
-      output:`out/board/${String(i).padStart(2,'0')}.jpg`,puppeteerInstance:browser});
+    const {buffer}=await renderStill({serveUrl,composition,frame,scale:.25,imageFormat:'jpeg',jpegQuality:87,
+      puppeteerInstance:browser});
+    tiles.push({input:buffer,left:16+i%5*280,top:16+Math.floor(i/5)*490});
   }
-  const result=spawnSync('ffmpeg',['-v','error','-y','-framerate','1','-i','out/board/%02d.jpg','-vf',
-    'tile=5x4:padding=10:margin=16:color=0x111d2e','-frames:v','1','-q:v','2','out/storyboard.jpg'],{stdio:'inherit'});
-  if(result.status!==0)throw new Error('FFmpeg could not assemble the storyboard');
-  await rm('out/board',{recursive:true,force:true});
+  await sharp({create:{width:1422,height:1982,channels:3,background:'#111d2e'}})
+    .composite(tiles).jpeg({quality:91}).toFile('out/storyboard.jpg');
 } finally {await browser.close({silent:true});}

@@ -25,7 +25,7 @@ jobs:
           path: out/storyboard.jpg
       - run: npm run render -- --concurrency=4 --crf=19
       - name: Verify film
-        run: ffprobe -v error -show_entries stream=codec_name,width,height,r_frame_rate,nb_frames:format=duration -of json out/sun-week.mp4
+        run: node scripts/verify.mjs
       - uses: actions/upload-artifact@v4
         with:
           name: sun-week-remotion

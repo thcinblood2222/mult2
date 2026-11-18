@@ -4,7 +4,7 @@
 
 ## Запуск
 
-Node.js 24 и npm. Для сборки листа раскадровки нужен FFmpeg в PATH.
+Node.js 24 и npm.
 
 ```sh
 npm ci
