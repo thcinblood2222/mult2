@@ -1,0 +1,35 @@
+name: Render Remotion
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npm run check
+      - run: npm run audio -- --table
+      - run: npm run storyboard
+      - uses: actions/upload-artifact@v4
+        with:
+          name: storyboard
+          path: out/storyboard.jpg
+      - run: npm run render -- --concurrency=4 --crf=19
+      - name: Verify film
+        run: ffprobe -v error -show_entries stream=codec_name,width,height,r_frame_rate,nb_frames:format=duration -of json out/sun-week.mp4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sun-week-remotion
+          path: |
+            out/sun-week.mp4
+            out/storyboard.jpg
+            docs/VOICEOVER.md
+            docs/SOUND.md
+          if-no-files-found: error
