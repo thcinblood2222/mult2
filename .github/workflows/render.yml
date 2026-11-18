@@ -1,5 +1,7 @@
 name: Render Remotion
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
 permissions:
   contents: read

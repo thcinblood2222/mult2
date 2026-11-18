@@ -1,0 +1,9 @@
+export const starts = [0,180,540,870,1200,1530,1860,2220,2550,2700];
+export const sceneNames = ['Вступление','День 1 · Последние восемь минут','День 2 · Земля сбегает','День 3 · Город и фотосинтез','День 4 · Приливы','День 5 · Подо льдом','День 6 · Жизнь на глубине','День 7 · Возвращение','Финал · Орбита'];
+export const boardFrames = [83,294,392,495,643,841,895,950,980,1033,1090,1155,1185,1419,1791,2108,2367,2497,2654];
+export const day1TimerAt=56;
+export const day1Tick=10;
+export const day1TimerSteps=14;
+export const thermometerSteps=[68,83,98,113,128,143,158];
+export const plantSteps=[42,58,74,90];
+export const plantAt=184;
